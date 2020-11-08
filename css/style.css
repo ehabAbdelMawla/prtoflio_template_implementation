@@ -1,0 +1,543 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --baseColor: #febc38;
+    --footHeight: 530px;
+    --contactElementHeight: 235px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: black;
+    color: white;
+    /* font-family: 'Poppins', sans-serif; */
+    /* height: 100000px; */
+}
+
+
+/* Start nav */
+
+nav {
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    z-index: 9999999;
+    top: 0;
+    right: 0;
+    left: 0;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+    background-color: #121212;
+}
+
+nav:hover {
+    opacity: 0.9;
+}
+
+nav ul {
+    list-style: none;
+    margin-bottom: 0;
+}
+
+nav ul li {
+    display: inline;
+    padding-bottom: 5px;
+}
+
+nav ul li.active {
+    transition: all 0.5s ease;
+    border-bottom: 2px solid var(--baseColor);
+}
+
+nav ul li a {
+    color: white;
+    font-size: 20px;
+    padding: 10px 5px;
+    margin: 0 3px;
+    transition: all 0.5s ease;
+}
+
+@media (min-width:991px) {
+    nav ul {
+        float: right;
+        padding: 0;
+        padding-right: 150px;
+    }
+    nav ul li a {
+        margin: 0 12px;
+    }
+}
+
+nav ul li a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* End Nav */
+
+
+/* Start Home Section */
+
+.home {
+    padding: 25px;
+    height: 636px;
+    overflow: hidden;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+.home .container {
+    overflow: hidden;
+}
+
+.home .container .col-md-6 p {
+    color: var(--baseColor);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.home .container .col-md-6 h2 {
+    font-size: 70px;
+    color: var(--baseColor);
+    letter-spacing: 6px;
+    margin-top: 10px;
+}
+
+.home .container .col-md-6 h2 span {
+    color: white;
+}
+
+.home .container .col-md-6 h3 {
+    font-size: 32px;
+    font-family: Arial, tahoma;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.home .container .col-md-6 input {
+    padding: 14px 25px;
+    font-size: 11PX;
+    border-radius: 25px;
+    font-family: tahoma;
+    font-weight: 750;
+    border: 0.5px solid rgba(221, 221, 221, 0.548);
+    color: white;
+    background: black;
+}
+
+.home .container .col-md-6 input:first-of-type {
+    background: var(--baseColor);
+    color: black;
+    border: none;
+    font-weight: 750;
+    margin: 5px;
+}
+
+.home .container .col-md-6:first-of-type {
+    margin-top: 125px;
+    padding-left: 90px;
+}
+
+@media (max-width:991px) {
+    .home {
+        height: fit-content;
+    }
+    .home .container .q {
+        margin-bottom: 25px;
+    }
+}
+
+
+/* End Home Section */
+
+
+/* Start About */
+
+.about .part2 {
+    padding-top: 55px;
+}
+
+.about .part2 h2,
+.resume .container h2,
+.services h2,
+.contact .container h2 {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 10px;
+    font-family: tahoma;
+}
+
+.about .part2 h2 {
+    text-align: left;
+}
+
+.about .part1 {
+    height: 800px;
+    overflow: hidden;
+}
+
+.about .part2 p {
+    color: gray;
+    margin: 25px 0;
+}
+
+.about .part2 table {
+    margin: 65px 0;
+}
+
+.about .part2 table tbody tr td {
+    padding: 8px;
+}
+
+.about .part2 table tbody tr td:nth-child(1) {
+    font-weight: 600;
+    padding-left: 0;
+}
+
+.about .part2 table tbody tr td:nth-child(2) {
+    color: gray;
+}
+
+.about .part2 p:nth-of-type(2) {
+    color: white;
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.about .part2 p:nth-of-type(2) span {
+    color: var(--baseColor);
+}
+
+.about .part2 input[type="button"],
+.formgroup input[type="button"],
+.contact .poster input,
+.contact .container .row .p2 input[type="button"] {
+    background: var(--baseColor);
+    color: black;
+    border: none;
+    border-radius: 28px;
+    padding: 15px;
+    font-weight: 550;
+    outline: none;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+@media (max-width:991px) {
+    .about .part2 h2,
+    .about .part2 {
+        text-align: center;
+    }
+    .about .part2 table {
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+/*  End About*/
+
+
+/* Start Resume */
+
+.resume .container p:first-of-type {
+    color: gray;
+    width: 60%;
+    text-align: center;
+    margin: 25px auto;
+}
+
+.resume .container .row {
+    overflow: hidden;
+}
+
+.resume .container .row .item {
+    padding: 20px;
+}
+
+.resume .container .row .item .bg {
+    background: #191919;
+    padding: 35px;
+    border-radius: 5px;
+}
+
+.resume .container .row .item h3 {
+    font-weight: 900;
+    color: var(--baseColor);
+    margin: 0px 0 10px 0;
+}
+
+.resume .container .row .item .bg>p:first-of-type {
+    color: white;
+    text-align: left;
+    margin: 0;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.resume .container .row .item .bg p:nth-of-type(2) {
+    color: gray;
+    font-size: 10.5px;
+    margin: 12.5px 0;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    font-family: arial, tahome;
+}
+
+.resume .container .row .item .bg p:nth-of-type(3) {
+    color: gray;
+    margin: 15px 0 8px;
+}
+
+.formgroup input[type="button"] {
+    padding-left: 28px;
+    padding-right: 28px;
+}
+
+.formgroup {
+    text-align: center;
+    margin: 15px;
+}
+
+@media (max-width:991px) {
+    .resume .container .row .item .bg {
+        text-align: center
+    }
+    .resume .container .row .item .bg p:first-of-type {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+
+/* End Resume */
+
+
+/* Start Services*/
+
+.services {
+    margin: 35px 0;
+    text-align: center;
+    overflow: hidden;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.services p:first-of-type {
+    margin: 20px;
+    color: gray
+}
+
+.services .col-md-4 {
+    margin: 10px 0;
+}
+
+.services .col-md-4 .gg span {
+    color: var(--baseColor);
+    font-size: 50px;
+}
+
+.services .col-md-4 .gg .unl {
+    margin: 20px 0;
+    color: white;
+}
+
+.services .col-md-4 .gg {
+    background: #191919;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.services .col-md-4 .gg .unl::after {
+    content: '';
+    bottom: 37px;
+    left: 45%;
+    background: var(--baseColor);
+    height: 1px;
+    width: 10%;
+    position: absolute;
+}
+
+
+/* End services */
+
+
+/* Start Contact */
+
+.contact .poster {
+    text-align: center;
+    background: url('../img/4k-wallpaper-calm-waters-dark-1252869.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    padding: 50px;
+    background-position: center center;
+}
+
+.contact .poster h2 {
+    color: white;
+    font-size: 40px;
+    font-weight: 900;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 75px 0 20px;
+}
+
+.contact .poster h2 span {
+    color: var(--baseColor);
+}
+
+.contact .poster p {
+    color: #ffffffba;
+    width: 35%;
+    margin: 0px 32.5%;
+}
+
+.contact .poster input {
+    padding: 12px 35px!important;
+    font-size: 10px;
+    word-spacing: 4px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+.contact .container h2 {
+    margin: 50px 0 35px;
+}
+
+.contact .container p {
+    color: gray;
+    text-align: center;
+    padding: 15px 300px;
+}
+
+.contact .container .iii {
+    margin-top: 0px;
+    /* background: red; */
+    text-align: center;
+    padding: 30px;
+    overflow: hidden;
+}
+
+.contact .container .iii span {
+    color: var(--baseColor);
+    font-size: 36px;
+    line-height: 100px;
+}
+
+.contact .container .iii .cirbg {
+    width: 100px;
+    height: 100px;
+    background: #191919;
+    margin: 25px auto;
+    border-radius: 50%;
+}
+
+.contact .container .iii p {
+    padding: 0;
+    color: white;
+}
+
+.contact .container .iii p:first-of-type {
+    color: gray;
+    padding: 0 22px;
+}
+
+.contact .container .iii h5 {
+    margin: 20px 0;
+    font-weight: 700;
+}
+
+.contact .container .row .p1,
+.contact .container .row .p2 {
+    margin-top: 25px;
+    height: var(--footHeight);
+}
+
+.contact .container .row .p1 {
+    background: #191919;
+    overflow: hidden;
+}
+
+.contact .container .row .p2 {
+    background: whitesmoke;
+    overflow: hidden;
+    padding: 40px;
+}
+
+.contact .container .row .p2 form input,
+.contact .container .row .p2 form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-weight: 500;
+}
+
+.contact .container .row .p2 form textarea {
+    height: 150px;
+    ;
+}
+
+.contact .container .row .p2 input[type="button"] {
+    width: fit-content;
+    font-size: 10px;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    padding: 12px 40px;
+}
+
+@media (max-width:991px) {
+    .contact .poster p {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .contact .container p {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .contact .container .iii {
+        margin-top: 0px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+    .contact .container .row .p2 {
+        margin: 0
+    }
+    .contact .container .iii {
+        height: var(--contactElementHeight);
+    }
+}
+
+@media (max-width:767px) {
+    .services .col-md-4 .gg .unl::after {
+        left: 47.5%;
+        width: 5%;
+    }
+    .about .part1 {
+        height: 600px;
+    }
+    .about .part2 {
+        padding-top: 0;
+    }
+}
+
+
+/* End Content */
