@@ -1,6 +1,6 @@
-# prtoflio_template_implementation
+# prtoflio Template Implementation
 
-<h2>Live Example : https://ehababdelmawla.github.io/prtoflio_template_implementation</h2>
+<h3><a href="https://ehababdelmawla.github.io/prtoflio_template_implementation">Live Demo</a></h3>
 
 <h3>Png Template:</h3>
 <img src="/Templte.png"/>
